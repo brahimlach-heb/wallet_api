@@ -1,0 +1,42 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Wallet</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/main.css' %}">
+</head>
+<body>
+
+    <div id="container">
+    
+      <div class="form-wrap">
+  
+        <h1>Wallet</h1>
+
+        <form action="#">
+            {% csrf_token %}
+          <!--create a div for each form component/element-->
+          <div class="form-group">
+            <label for="Balance">Balance</label>
+            <input type="button" name="Balance" value="{{bal}}">
+  
+          </div>
+  
+          <div class="form-group">
+            <label for="debt">debt</label>
+            <input type="button" name="debt" value="{{debt}}">
+  
+          </div>
+
+        </form>
+  
+      </div>
+  
+    </div>
+  </body>
+  
+  </html>
+</html>

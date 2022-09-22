@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>{% block title %} {% endblock title %}</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-light fa-bars"></i>
+        </label>
+        <label class="logo">{{ user.username}}</label>
+        
+        <ul>
+            {% if user.is_authenticated %}
+
+            {% for lastindex in lastindex %}
+            <li><a href="#">/ {{lastindex.total}} /</a></li>
+            {% endfor %}
+
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            
+            {% else %}
+            <li><a href="{% url 'signup' %}">SignUp</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'profits' %}">Profits</a></li>
+            <li><a href="#">Empty</a></li>
+            <li><a href="#">Empty</a></li>
+        </ul>
+    </nav>
+    <section>
+
+    {% block content %} 
+    
+    {% endblock content %}
+
+
+    </section>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: rgb(113, 151, 118);
+  }
+
+  nav {
+    margin-top: 20px;
+    background-image: url(../img/ziraatnav.jpg);
+    height: 80px;
+    letter-spacing: 3px;
+    padding: 0 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+  }
+
+  label.logo {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+
+  nav ul {
+    float: right;
+    margin-right: 80px;
+  }
+
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  a.active,a:hover {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-decoration: none;
+    transition: .5s;
+    color: white;
+  }
+
+  .checkbtn {
+    font-size: 40px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  @media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+  }
+
+  @media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+  }
+
+  section {
+    /*background-color: rgb(150, 162, 165);*/
+    margin: 10px auto;
+    width: 90%;
+
+    color: rgb(0, 0, 0);
+    padding: 20px 40px;
+  }
+  
+
+
+  /*********************inputs****************************/
+  .all-api {
+    padding: 0px 10px;
+    color: black;
+  }
+
+  .api {
+    display: inline-block;
+    margin: 20px 0px 20px 0;
+    font-size: 20px;
+  }
+
+  .api input {
+    width: 50%;
+    padding: 4px 0px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .api .input_note{
+    padding: 4px 0px;
+    margin-right: 350px;
+  }
+
+  
+  @media (max-width: 858px) {
+    .api input {
+      font-size: 15px;
+      width: 100%;
+      padding: 5px 0;
+      
+    }
+  }
+
+  /*********************************************/
+ 
+  .btn-design {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .btn {
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: #e10514;
+    padding: 10px 70px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 17px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+    /*, .btn:focus, .btn:active*/
+  .btn:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: #ad0510;
+    
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  th,td {
+    padding: 5px;
+  }
+
+  #total {
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    padding: 7px;
+  }
+
+
+  /**** table design ********/
+
+  .table-title {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  table {
+    padding: 10px 0;
+  }
+
+  table tr th {
+    background-color: #3f4346;
+    padding: 10px 0;
+  }
+  table tr td {
+    background-color: #545b61;
+    color: rgb(255, 255, 255);
+    border-right: 1px solid black;
+  }
+
+
+
+  /********special designs*********/
+
+  .totalo {
+    background-color: rgb(131, 131, 0);
+    border-bottom: rgb(0, 0, 0) solid ;
+  }
+
+
+
+  /*********apis_designs************/
+
+  .apis_designs {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+
+
+  .apis_designs {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+
+  .apis_designs:hover {
+    background: none;
+    color: rgb(255, 0, 0);
+    transition: .5s;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .already_login{
+    color: white;
+    margin: 10px;
+  }
+  .already_login a {
+    color: rgb(0, 0, 255);
+  }
+
+
+  /*hidden*/
+  
+
+table tbody .show_hide{
+  background-color: rgb(130, 116, 39);
+
+  font-size: 20px;
+}
+
+ 

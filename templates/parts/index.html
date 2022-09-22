@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+
+
+
+    <title>{% block title %} ALAYATL {% endblock title %}</title>
+ 
+<body>
+  
+    {% block content %} 
+
+     {% if user.is_authenticated %}
+        <form method="post">
+            {% csrf_token %}
+
+           <!-- <div class="all-api">
+                <div class="api">
+                    <label for="number-design" class="lebel-desing">Date</label>
+                    <input onkeyup="getTotal()" type="text" id="date" name="dateA">
+                </div>-->
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://bayi.ruyakontor.com/?site=bayi.ruyakontor.com" target="black">Ruya</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="ruya" name="ruyaA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://bayi.karmagsm.com.tr/?site=bayi.karmagsm.com.tr" target="black">Karma</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="karma" name="karmaA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://bayi.adiltl.net/?site=bayi.adiltl.net" target="black">Adil</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="adil" name="adilA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="http://bayi.taimkontor.com/index.php?giris=true" target="black">Taim</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="taim" name="taimA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="http://efixtl.com/index.php" target="black">Efix</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="efix" name="efixA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://as7abcard.com/app/page/home" target="black">Ashab</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="ashab" name="ashabA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://www.turkpin.com/?p=" target="black">Turkpin</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="turkpin" name="turkpinA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://gold.razer.com/" target="black">Razer</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="razer" name="razerA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://wa.me/+31620507588" target="black">Alfurat</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="alfurat" name="alfuratA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://wa.me/+905435450743" target="black">Musaab</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="musaab" name="musaabA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://wa.me/+963998454673" target="black">Abu Talal</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="abutalal" name="abutalalA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://www.kuveytturk.com.tr/" target="black">Kuvyet</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="kuvyet" name="kuvyetA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://www.ziraatbank.com.tr/tr/fiyatlar-ve-oranlar" target="black">Ziraat</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="ziraat" name="ziraatA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="https://keep.google.com/#label/1%20Razer%20gold%20pin" target="black">Codes</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="codes" name="codesA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="http://bayi.alayatl.com//Ayarlar/bayiler.php?alt_bayiler=goster" target="black">Bayilar</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="bayilar" name="bayilarA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="#" target="black">Depts</a></label><br>
+                    <input onkeyup="getTotal()" type="number" id="depts" name="deptsA">
+                </div>
+                <div class="api">
+                    <label for="number-design" class="lebel-desing"><a class="apis_designs" href="#" target="black">Notes</a></label><br>
+                    <input type="text" id="notes" name="notesA" class="input_note">
+                </div>
+              
+                
+                
+            <div class="btn-design">
+               <button class="btn" id="submit">Calculate</button>
+            </div>
+           
+        </form>
+      <br>
+                <div>
+                    <small id="total" name="totalA"></small>
+                </div>
+
+        {% else %}
+        <h2>You have to Login or Sign up to show this page</h2>
+        {% endif %}
+{% endblock content %}
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+
+
+<title>{% block title %} TEST {% endblock title %}</title>
+
+<body>
+    {% block content %} 
+
+
+    {% if user.is_authenticated %}
+
+
+
+    <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Ruya</th>
+            <th scope="col">Karma</th>
+            <th scope="col">Adil</th>
+            <th scope="col">Taim </th>
+            <th scope="col">Efix </th>
+            <th scope="col">Ashab</th>
+            <th scope="col">Turkpin</th>
+            <th scope="col">Razer</th>
+            <th scope="col">Alfurat</th>
+            <th scope="col">Musaab</th>
+            <th scope="col">Abutalal</th>
+            <th scope="col">Kuvyet</th>
+            <th scope="col">Ziraat</th>
+            <th scope="col">Codes</th>
+            <th scope="col">Bayilar</th>
+            <th scope="col">Depts</th>
+            <th scope="col">Total</th>
+            
+          </tr>
+        </thead>
+                {% for apis in apis %}
+  
+        <tbody>
+  
+          <tr>
+            <th scope="row">{{apis.date.day}}-{{apis.date.month}}-{{apis.date.year}}</th>
+            <td>{{apis.ruya}}</td>
+            <td>{{apis.karma}}</td>
+            <td>{{apis.adil}}</td>
+            <td>{{apis.taim}}</td>
+            <td>{{apis.efix}}</td>
+            <td>{{apis.ashab}}</td>
+            <td>{{apis.turkpin}}</td>
+            <td>{{apis.razer}}</td>
+            <td>{{apis.alfurat}}</td>
+            <td>{{apis.musaab}}</td>
+            <td>{{apis.abutalal}}</td>
+            <td>{{apis.kuvyet}}</td>
+            <td>{{apis.ziraat}}</td>
+            <td>{{apis.codes}}</td>
+            <td>{{apis.bayilar}}</td>
+            <td>{{apis.depts}}</td>
+            <th>{{apis.total}}</th>
+          
+          </tr> 
+              
+        </tbody>
+
+          <tbody >
+                
+                <td></td>
+                <td colspan="13" class="show_hide">{{apis.notes}}</td>
+                
+                <td colspan="4" class="show_hide">Net Profit: </td>
+                
+          
+          </tbody>
+          
+              
+                {% endfor %}
+  
+      </table>
+
+
+      {% else %}
+      <h2>You have to Login or Sign up to show this page</h2>
+      {% endif %}
+
+    {% endblock content %}
+
+</body>
+</html>
